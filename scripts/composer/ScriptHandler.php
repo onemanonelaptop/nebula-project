@@ -43,6 +43,11 @@ class ScriptHandler {
       }
     }
 
+    // Create the composer patches file.
+    if (!$fs->exists($drupalRoot . '/patches/composer.patches.json')) {
+      $fs->touch($drupalRoot . '/patches/composer.patches.json');
+    }
+
     // Prepare the settings file for installation
     if (!$fs->exists($drupalRoot . '/sites/default/settings.php') and $fs->exists($drupalRoot . '/sites/default/default.settings.php')) {
       $fs->copy($drupalRoot . '/sites/default/default.settings.php', $drupalRoot . '/sites/default/settings.php');
