@@ -19,8 +19,8 @@ class ScriptHandler {
     public static function createPreRequisiteFiles(Event $event) {
         $fs = new Filesystem();
         // Create the composer patches file.
-        if (!$fs->exists($drupalRoot . '/patches/composer.patches.json')) {
-            $fs->touch($drupalRoot . '/patches/composer.patches.json');
+        if (!$fs->exists('../../patches/composer.patches.json')) {
+            $fs->touch('../../patches/composer.patches.json');
         }
 
     }
