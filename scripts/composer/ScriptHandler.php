@@ -26,6 +26,7 @@ class ScriptHandler {
       'modules',
       'profiles',
       'themes',
+      'patches',
       '../private_files',
       '../temp_files',
       '../keys',

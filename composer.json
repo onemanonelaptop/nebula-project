@@ -156,6 +156,8 @@
     "patchLevel": {
       "drupal/core": "-p2"
     },
+    "enable-patching": true,
+    "patches-file": "web/patches/composer.patches.json",
     "installer-paths": {
       "web/core": ["type:drupal-core"],
       "web/libraries/{$name}": ["type:drupal-library"],
