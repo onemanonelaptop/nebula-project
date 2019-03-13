@@ -117,7 +117,7 @@
     "drupal/views_bulk_operations": "^2.0",
     "drupal/viewsreference": "~2.0",
     "drupal/vppr": "1.x-dev",
-    "drupal/webform": "5.0-rc18",
+    "drupal/webform": "5.0-rc22",
     "drupal/webform_encrypt": "dev-1.x",
     "drupal/xmlsitemap": "^1.0@alpha"
   },
