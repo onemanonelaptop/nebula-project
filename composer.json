@@ -140,7 +140,6 @@
   "scripts": {
     "pre-install-cmd": [
       "DrupalProject\\composer\\ScriptHandler::checkComposerVersion",
-      "DrupalProject\\composer\\ScriptHandler::createPreRequisiteFiles"
     ],
     "pre-update-cmd": [
       "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
@@ -158,7 +157,7 @@
       "drupal/core": "-p2"
     },
     "enable-patching": true,
-    "patches-file": "web/patches/composer.patches.json",
+    "patches-file": "composer.patches.json",
     "installer-paths": {
       "web/core": ["type:drupal-core"],
       "web/libraries/{$name}": ["type:drupal-library"],

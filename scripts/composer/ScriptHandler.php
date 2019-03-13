@@ -16,14 +16,6 @@ use Webmozart\PathUtil\Path;
 class ScriptHandler {
 
 
-    public static function createPreRequisiteFiles(Event $event) {
-        $fs = new Filesystem();
-        // Create the composer patches file.
-        if (!$fs->exists('../../patches/composer.patches.json')) {
-            $fs->touch('../../patches/composer.patches.json');
-        }
-
-    }
 
   public static function createRequiredFiles(Event $event) {
     $fs = new Filesystem();
