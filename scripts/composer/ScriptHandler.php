@@ -16,6 +16,54 @@ use Webmozart\PathUtil\Path;
 class ScriptHandler {
 
 
+    public static function removeFiles(Event $event) {
+        $fs = new Filesystem();
+        $drupalFinder = new DrupalFinder();
+        $drupalFinder->locateRoot(getcwd());
+        $drupalRoot = $drupalFinder->getDrupalRoot();
+        $event->getIO()->write($drupalRoot);
+
+        if ($fs->exists($drupalRoot . '/core/COPYRIGHT.txt')) {
+            $fs->remove($drupalRoot . '/core/COPYRIGHT.txt');
+            $event->getIO()->write("Removing COPYRIGHT.txt");
+        }
+
+        if ($fs->exists($drupalRoot . '/core/CHANGELOG.txt')) {
+            $fs->remove($drupalRoot . '/core/CHANGELOG.txt');
+            $event->getIO()->write("Removing CHANGELOG.txt");
+        }
+
+        if ($fs->exists($drupalRoot . '/core/INSTALL.mysql.txt')) {
+            $fs->remove($drupalRoot . '/core/INSTALL.mysql.txt');
+            $event->getIO()->write("Removing INSTALL.mysql.txt");
+        }
+
+        if ($fs->exists($drupalRoot . '/core/INSTALL.pgsql.txt')) {
+            $fs->remove($drupalRoot . '/core/INSTALL.pgsql.txt');
+            $event->getIO()->write("Removing INSTALL.pgsql.txt");
+        }
+
+        if ($fs->exists($drupalRoot . '/core/INSTALL.sqlite.txt')) {
+            $fs->remove($drupalRoot . '/core/INSTALL.sqlite.txt');
+            $event->getIO()->write("Removing INSTALL.sqlite.txt");
+        }
+
+        if ($fs->exists($drupalRoot . '/core/INSTALL.txt')) {
+            $fs->remove($drupalRoot . '/core/INSTALL.txt');
+            $event->getIO()->write("Removing INSTALL.sqlite.txt");
+        }
+
+        if ($fs->exists($drupalRoot . '/core/LICENSE.txt')) {
+            $fs->remove($drupalRoot . '/core/LICENSE.txt');
+            $event->getIO()->write("Removing core/LICENSE.txt");
+        }
+
+        if ($fs->exists($drupalRoot . '/core/MAINTAINERS.txt')) {
+            $fs->remove($drupalRoot . '/core/MAINTAINERS.txt');
+            $event->getIO()->write("Removing core/MAINTAINERS.txt");
+        }
+
+    }
 
   public static function createRequiredFiles(Event $event) {
     $fs = new Filesystem();
