@@ -15,6 +15,7 @@ use Webmozart\PathUtil\Path;
 
 class ScriptHandler {
 
+
   public static function createRequiredFiles(Event $event) {
     $fs = new Filesystem();
     $drupalFinder = new DrupalFinder();
@@ -25,6 +26,12 @@ class ScriptHandler {
       'modules',
       'profiles',
       'themes',
+      '../private_files',
+      '../temp_files',
+      '../keys',
+      '../config',
+      '../config/vhosts',
+      '../config/sync'
     ];
 
     // Required for unit testing
