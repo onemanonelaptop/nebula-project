@@ -16,6 +16,15 @@ use Webmozart\PathUtil\Path;
 class ScriptHandler {
 
 
+    public static function createPreRequisiteFiles(Event $event) {
+        $fs = new Filesystem();
+        // Create the composer patches file.
+        if (!$fs->exists($drupalRoot . '/patches/composer.patches.json')) {
+            $fs->touch($drupalRoot . '/patches/composer.patches.json');
+        }
+
+    }
+
   public static function createRequiredFiles(Event $event) {
     $fs = new Filesystem();
     $drupalFinder = new DrupalFinder();
@@ -43,10 +52,6 @@ class ScriptHandler {
       }
     }
 
-    // Create the composer patches file.
-    if (!$fs->exists($drupalRoot . '/patches/composer.patches.json')) {
-      $fs->touch($drupalRoot . '/patches/composer.patches.json');
-    }
 
     // Prepare the settings file for installation
     if (!$fs->exists($drupalRoot . '/sites/default/settings.php') and $fs->exists($drupalRoot . '/sites/default/default.settings.php')) {
