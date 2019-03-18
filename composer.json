@@ -78,6 +78,7 @@
     "drupal/migrate_tools": "^4.0",
     "drupal/mimemail": "^1.0@alpha",
     "drupal/module_missing_message_fixer": "^1.0@beta",
+    "drupal/nebula_profile": "1.x-dev",
     "drupal/noreferrer": "^1.7",
     "drupal/override_node_options": "^2.4",
     "drupal/paragraphs": "^1.0",
