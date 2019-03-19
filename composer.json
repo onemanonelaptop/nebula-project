@@ -169,7 +169,7 @@
       "web/profiles/contrib/{$name}": ["type:drupal-profile"],
       "web/themes/contrib/{$name}": ["type:drupal-theme"],
       "drush/Commands/{$name}": ["type:drupal-drush"],
-      "twbs/bootstrap-sass": ["web/libraries/bootstrap-sass"]
+      "web/libraries/bootstrap-sass": ["twbs/bootstrap-sass"]
     },
     "drupal-scaffold": {
       "initial": {
