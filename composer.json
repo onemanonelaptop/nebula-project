@@ -152,7 +152,9 @@
     ],
     "post-update-cmd": [
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-      "DrupalProject\\composer\\ScriptHandler::removeFiles"
+      "DrupalProject\\composer\\ScriptHandler::removeFiles",
+      "DrupalProject\\composer\\ScriptHandler::moveBootstrap",
+
     ]
   },
   "extra": {

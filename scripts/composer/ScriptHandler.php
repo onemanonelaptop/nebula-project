@@ -65,6 +65,18 @@ class ScriptHandler {
 
     }
 
+    public static function moveBootstrap(Event $event) {
+        $fs = new Filesystem();
+        $drupalFinder = new DrupalFinder();
+        $drupalFinder->locateRoot(getcwd());
+        $drupalRoot = $drupalFinder->getDrupalRoot();
+        $event->getIO()->write($drupalRoot);
+        if ($fs->exists($drupalRoot . '/../vendor/twbs/bootstrap-sass')) {
+            $fs->mirror($drupalRoot . '/../vendor/twbs/bootstrap-sass',$drupalRoot . '/libraries/bootstrap-sass');
+        }
+    }
+
+
   public static function createRequiredFiles(Event $event) {
     $fs = new Filesystem();
     $drupalFinder = new DrupalFinder();
