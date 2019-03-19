@@ -121,7 +121,8 @@
     "drupal/vppr": "1.x-dev",
     "drupal/webform": "5.0-rc22",
     "drupal/webform_encrypt": "dev-1.x",
-    "drupal/xmlsitemap": "^1.0@alpha"
+    "drupal/xmlsitemap": "^1.0@alpha",
+    "twbs/bootstrap-sass": "^3.3"
   },
   "require-dev": {
     "webflo/drupal-core-require-dev": "^8.6.0"
@@ -167,7 +168,8 @@
       "web/modules/contrib/{$name}": ["type:drupal-module"],
       "web/profiles/contrib/{$name}": ["type:drupal-profile"],
       "web/themes/contrib/{$name}": ["type:drupal-theme"],
-      "drush/Commands/{$name}": ["type:drupal-drush"]
+      "drush/Commands/{$name}": ["type:drupal-drush"],
+      "twbs/bootstrap-sass": ["web/libraries/bootstrap-sass"]
     },
     "drupal-scaffold": {
       "initial": {
