@@ -74,6 +74,9 @@ class ScriptHandler {
         if ($fs->exists($drupalRoot . '/../vendor/twbs/bootstrap-sass')) {
             $fs->mirror($drupalRoot . '/../vendor/twbs/bootstrap-sass',$drupalRoot . '/libraries/bootstrap-sass');
         }
+        if ($fs->exists($drupalRoot . '/../vendor/twbs/bootstrap')) {
+            $fs->mirror($drupalRoot . '/../vendor/twbs/bootstrap',$drupalRoot . '/libraries/bootstrap');
+        }
     }
 
 
