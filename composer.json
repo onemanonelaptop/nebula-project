@@ -122,7 +122,8 @@
     "drupal/webform": "5.0-rc22",
     "drupal/webform_encrypt": "dev-1.x",
     "drupal/xmlsitemap": "^1.0@alpha",
-    "twbs/bootstrap-sass": "^3.3"
+    "twbs/bootstrap-sass": "^3.3",
+    "twbs/bootstrap": "^4.3"
   },
   "require-dev": {
     "webflo/drupal-core-require-dev": "^8.6.0"
