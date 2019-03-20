@@ -79,6 +79,7 @@
     "drupal/mimemail": "^1.0@alpha",
     "drupal/module_missing_message_fixer": "^1.0@beta",
     "drupal/nebula": "1.x-dev",
+    "drupal/nebula_demo": "1.x-dev",
     "drupal/nebula_editor": "1.x-dev",
     "drupal/nebula_profile": "1.x-dev",
     "drupal/noreferrer": "^1.7",
