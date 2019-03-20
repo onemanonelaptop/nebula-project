@@ -84,6 +84,7 @@
     "drupal/nebula_profile": "1.x-dev",
     "drupal/noreferrer": "^1.7",
     "drupal/override_node_options": "^2.4",
+    "drupal/pathologic": "^1.0",
     "drupal/paragraphs": "^1.0",
     "drupal/paragraphs_accordion": "^1.0",
     "drupal/paragraphs_hr": "1.x-dev",
