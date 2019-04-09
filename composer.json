@@ -90,6 +90,7 @@
     "drupal/paragraphs_cards": "1.x-dev",
     "drupal/paragraphs_hr": "1.x-dev",
     "drupal/paragraphs_iframe": "1.x-dev",
+    "drupal/paragraphs_webform": "1.x-dev",
     "drupal/paragraphs_wysiwyg": "1.x-dev",
     "drupal/password_policy": "^3.0@alpha",
     "drupal/pathauto": "^1.1",
