@@ -117,8 +117,17 @@ class ScriptHandler {
           require_once $drupalRoot . '/core/includes/bootstrap.inc';
           require_once $drupalRoot . '/core/includes/install.inc';
           new Settings([]);
+
           $settings['settings']['config_sync_directory'] = (object) [
               'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/config/sync', $drupalRoot),
+              'required' => TRUE,
+          ];
+          $settings['settings']['file_temp_path'] = (object) [
+              'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/temp_files', $drupalRoot),
+              'required' => TRUE,
+          ];
+          $settings['settings']['file_private_path'] = (object) [
+              'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/private_files', $drupalRoot),
               'required' => TRUE,
           ];
           drupal_rewrite_settings($settings, $drupalRoot . '/sites/default/settings.php');

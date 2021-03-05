@@ -111,6 +111,8 @@
         "web-root": "web/"
       }
     },
+    "enable-patching": true,
+    "patches-file": "composer.patches.json",
     "installer-paths": {
       "web/core": ["type:drupal-core"],
       "web/libraries/{$name}": ["type:drupal-library"],
