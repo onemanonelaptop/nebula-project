@@ -50,8 +50,6 @@
     "drupal/menu_link_attributes": "^1.0",
     "drupal/menu_select": "1.x-dev",
     "drupal/metatag": "^1.4",
-    "drupal/migrate_plus": "^4.0",
-    "drupal/migrate_tools": "^4.0",
     "drupal/mimemail": "^1.0@alpha",
     "drupal/module_missing_message_fixer": "^1.0@beta",
     "drupal/nebula": "1.x-dev",
