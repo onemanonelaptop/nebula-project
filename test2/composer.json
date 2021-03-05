@@ -70,6 +70,7 @@
     "drupal/webform": "^6",
     "drupal/xero": "2.x-dev",
     "drush/drush": "^10.3",
+    "furf/jquery-ui-touch-punch": "dev-master",
     "twbs/bootstrap": "^4.5",
     "webflo/drupal-finder": "^1.0.0"
   },
