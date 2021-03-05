@@ -92,10 +92,13 @@
     "drupal/ultimate_cron": "^2.0@alpha",
     "drupal/username_enumeration_prevention": "^1.0@beta",
     "drupal/view_unpublished": "1.x-dev",
+    "drupal/views_bulk_operations": "^2.0",
+    "drupal/viewsreference": "^2.0",
     "drupal/vppr": "1.x-dev",
     "drupal/webform": "^6.0",
     "drupal/webform_encrypt": "dev-1.x",
     "drupal/xmlsitemap": "^1.0@alpha",
+    "twbs/bootstrap-sass": "^3.3",
     "twbs/bootstrap": "^4.3"
   },
   "require-dev": {
