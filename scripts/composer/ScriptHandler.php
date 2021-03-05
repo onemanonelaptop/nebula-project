@@ -90,6 +90,7 @@ class ScriptHandler {
     $dirs = [
       'libraries',
       'modules',
+      'modules/custom',
       'profiles',
       'themes',
       'patches',
