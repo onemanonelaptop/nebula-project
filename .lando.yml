@@ -1,14 +1,23 @@
 name: nebula
-recipe: drupal8
+recipe: drupal9
 config:
-  php: '7.2'
-  via: apache:2.4
-  database: mariadb:10.2
+  php: '7.4'
+  via: apache
+  database: mariadb:10.4
   webroot: web
-  drush: ^8
-  xdebug: true
+  drush: ^10
+proxy:
+  appserver:
+    - oa.lndo.site
+    - www.ombudsmanassociation.org
+  phpmyadmin:
+    - oa.mysql.lndo.site
 services:
   appserver:
+    overrides:
+      environment:
+        PHP_IDE_CONFIG: "serverName=appserver"
+    xdebug: true
     build_as_root:
       - apt-get update -y
       - apt-get install git-flow -y
@@ -16,18 +25,19 @@ services:
       - apt-get install vim -y
       - apt-get install net-tools -y
       - apt-get install memcached -y
-      - apt-get install libmemcached-dev -y:q
-      - apt-get install clamav clamav-daemon -y
+      - apt-get install libmemcached-dev -y
       - apt-get install cron -y
       - apt-get install curl -y
       - apt-get install zip unzip -y
       - apt-get install imagemagick -y
-      - docker-php-ext-enable memcached
     run_as_root:
-      - crontab /app/scripts/cron
+      - echo "*/1 * * * * drush --root=/var/www/html/web --quiet core-cron --yes" | crontab -
       - service cron start
   mailhog:
     type: mailhog
     portforward: true
     hogfrom:
       - appserver
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
