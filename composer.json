@@ -64,7 +64,6 @@
     "drupal/pathologic": "^1.0",
     "drupal/paragraphs": "^1.0",
     "drupal/paragraphs_accordion": "^1.0",
-    "drupal/paragraphs_cards": "1.x-dev",
     "drupal/paragraphs_hr": "1.x-dev",
     "drupal/paragraphs_iframe": "1.x-dev",
     "drupal/paragraphs_wysiwyg": "1.x-dev",
