@@ -12,6 +12,7 @@ use Composer\Semver\Comparator;
 use DrupalFinder\DrupalFinder;
 use Symfony\Component\Filesystem\Filesystem;
 use Webmozart\PathUtil\Path;
+use Drupal\Core\Site\Settings;
 
 class ScriptHandler {
 
@@ -97,7 +98,8 @@ class ScriptHandler {
       '../keys',
       '../config',
       '../config/vhosts',
-      '../config/sync'
+      '../config/sync',
+      '../config/ssl'
     ];
 
     // Required for unit testing
